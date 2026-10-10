@@ -65,6 +65,7 @@ python scripts/cards.py      # 生成传播物料（结算单卡 + 派对邀请�
 
 📺 **效果演示页**：[docs/demo.html](./docs/demo.html)（浏览器打开即看双线真实输出）
 📨 **传播物料示例**：[团建结算单](./examples/settlement-card.html) · [派对邀请函](./examples/party-invite.html)（单文件 HTML，可直接发群）
+🖼 **海报**：![团建](docs/promo/poster-teammeal.jpg) ![派对](docs/promo/poster-party.jpg)
 
 ## 架构
 
