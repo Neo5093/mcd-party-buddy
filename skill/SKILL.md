@@ -3,7 +3,7 @@ name: party-buddy
 display_name: 麦门派对搭子
 display_name_en: PartyBuddy
 description: "麦门派对搭子——帮组织者一句话搞定麦当劳团餐外送（预算搭配+满减优化+预约送达）和麦麦派对/体验营预约（生日派对/主题派对/品鉴会/读书会）。触发词：团建订餐、麦当劳团餐、团餐、生日派对、麦麦派对、品鉴会、体验营、读书会、party、派对预约、组局。"
-description_zh: "组织者视角的麦当劳助手：团餐按人均预算自动搭配并解读满减阶梯，派对/体验营按城市门店日期场次一条龙预约，下单前强制人工确认。"
+description_zh: "组织者的麦当劳外挂：一句话配好 30 人团餐，满减阶梯自动算到最省；派对/体验营按门店场次直接约，下单前永远你拍板。"
 description_en: "PartyBuddy — a McDonald's MCP skill for organizers. Budget-optimized team meal ordering with promotion-ladder math, plus party/event booking with session guidance. Human confirmation required before any order."
 category: life
 version: 1.0.0
