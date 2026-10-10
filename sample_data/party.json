@@ -1,0 +1,51 @@
+{
+  "_note": "样例数据来自 2026-10-09~10 派对链路真实接口返回（mall-points-products / query-party-city / query-party-store / date / session），门店信息为公开商业信息",
+  "products": [
+    {"spuId": 5224, "spuName": "麦当劳狂欢生日派对 迪士尼疯狂动物城主题", "catName": "生日类派对", "price": 58, "status": 2, "upTime": "2026-03-03", "downTime": "2026-12-31", "skuId": 5730, "partyType": 1, "partyPeople": "5-12", "partyAge": "4-12", "partyRange": 3},
+    {"spuId": 5247, "spuName": "麦当劳狂欢生日派对 迪士尼疯狂动物城主题（尊享版）", "catName": "生日类派对", "price": 98, "status": 2, "upTime": "2024-03-28", "downTime": "2026-12-31"},
+    {"spuId": 8084, "spuName": "麦当劳一起开心鸭生日派对", "catName": "生日类派对", "price": 50, "status": 2, "upTime": "2024-09-27", "downTime": "2026-12-31"},
+    {"spuId": 8516, "spuName": "麦当劳一起开心鸭尊享版生日派对", "catName": "生日类派对", "price": 138, "status": 2, "upTime": "2024-10-31", "downTime": "2026-12-31"},
+    {"spuId": 1065, "spuName": "迪士尼奇妙生日探索之旅", "catName": "生日类派对", "price": 45, "status": 2, "upTime": "2022-09-22", "downTime": "2026-12-31"},
+    {"spuId": 1779, "spuName": "麦当劳奇妙生日派对", "catName": "生日类派对", "price": 50, "status": 2, "upTime": "2023-03-16", "downTime": "2027-12-31"},
+    {"spuId": 17356, "spuName": "麦当劳海底小纵队欢乐派对（常规版）", "catName": "主题类派对", "price": 58, "status": 2, "upTime": "2026-07-21", "downTime": "2027-07-15"},
+    {"spuId": 6370, "spuName": "麦当劳过家家派对", "catName": "主题类派对", "price": 55, "status": 2, "upTime": "2024-05-22", "downTime": "2027-05-22"},
+    {"spuId": 5643, "spuName": "麦当劳趣读派对", "catName": "主题类派对", "price": 45, "status": 2, "upTime": "2024-04-23", "downTime": "2027-04-23"},
+    {"spuId": 13496, "spuName": "麦麦奇妙夜捣蛋派对常规版", "catName": "主题类派对", "price": 58, "status": 2, "upTime": "2025-10-04", "downTime": "2028-10-04"},
+    {"spuId": 15276, "spuName": "万马奔腾开心派对常规版", "catName": "主题类派对", "price": 58, "status": 2, "upTime": "2026-02-04", "downTime": "2027-06-30"},
+    {"spuId": 1830, "spuName": "麦当劳亲子读书会", "catName": "读书会", "price": 45, "status": 2, "upTime": "2023-03-29", "downTime": "2026-12-30"},
+    {"spuId": 1670, "spuName": "麦咖啡™奶铁品鉴会", "catName": "品鉴会", "price": 25, "status": 2, "upTime": "2023-02-21", "downTime": "2026-12-31"},
+    {"spuId": 12907, "spuName": "消防体验营", "catName": "品鉴会", "price": 72, "status": 2, "upTime": "2025-09-01", "downTime": "2026-12-31"},
+    {"spuId": 16158, "spuName": "小小牙医体验营", "catName": "品鉴会", "price": 72, "status": 2, "upTime": "2026-04-15", "downTime": "2026-12-31"},
+    {"spuId": 12897, "spuName": "职业体验营", "catName": "品鉴会", "price": 72, "status": 2, "upTime": "2025-09-01", "downTime": "2026-12-31"},
+    {"spuId": 15146, "spuName": "一年一度品虾会（已结束样例）", "catName": "品鉴会", "price": 25.9, "status": 2, "upTime": "2026-01-23", "downTime": "2026-01-26"}
+  ],
+  "cities": [
+    {"code": "110100", "name": "北京市", "latitude": 39.904179, "longitude": 116.407387},
+    {"code": "310100", "name": "上海市", "latitude": 31.230525, "longitude": 121.473667},
+    {"code": "440100", "name": "广州市", "latitude": 23.130061, "longitude": 113.264499},
+    {"code": "440300", "name": "深圳市", "latitude": 22.543527, "longitude": 114.057939},
+    {"code": "330100", "name": "杭州市", "latitude": 30.246026, "longitude": 120.210792},
+    {"code": "510100", "name": "成都市", "latitude": 30.572961, "longitude": 104.066301},
+    {"code": "370100", "name": "济南市", "latitude": 36.652069, "longitude": 117.120128},
+    {"code": "120100", "name": "天津市", "latitude": 39.085318, "longitude": 117.201509},
+    {"code": "500100", "name": "重庆市", "latitude": 29.563707, "longitude": 106.550483},
+    {"code": "420100", "name": "武汉市", "latitude": 30.593354, "longitude": 114.304569},
+    {"code": "610100", "name": "西安市", "latitude": 34.343207, "longitude": 108.939645},
+    {"code": "320100", "name": "南京市", "latitude": 32.059344, "longitude": 118.796624}
+  ],
+  "stores": [
+    {"code": "1951035", "name": "麦当劳北京东单北大街餐厅", "address": "东单北大街112、114号", "distanceKm": 1.2},
+    {"code": "1951020", "name": "麦当劳北京东华门大街(景泰蓝)餐厅", "address": "东华门大街26号", "distanceKm": 1.2},
+    {"code": "1950116", "name": "麦当劳北京幸福大街餐厅", "address": "广渠门内大街80号通正大厦底商", "distanceKm": 2.2},
+    {"code": "1950913", "name": "麦当劳北京东四西大街餐厅", "address": "隆福寺前街1号隆福广场南坊WL1-20", "distanceKm": 2.4},
+    {"code": "1951039", "name": "麦当劳北京美术馆后街餐厅", "address": "美术馆后街77号4号楼1层103号", "distanceKm": 2.6},
+    {"code": "1950973", "name": "麦当劳北京雅宝路餐厅", "address": "雅宝路7号1号楼1层C101商铺", "distanceKm": 2.8},
+    {"code": "1950927", "name": "麦当劳北京朝外西街餐厅", "address": "朝外西街3号", "distanceKm": 3.0},
+    {"code": "1950117", "name": "麦当劳北京虎坊路餐厅", "address": "南横街东口危改N12楼裙房", "distanceKm": 3.0}
+  ],
+  "dates": ["2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18"],
+  "sessions": [
+    {"id": 36916457, "timeStart": "12:00", "timeEnd": "13:30", "partyMin": 5, "partyMax": 12, "price": 58.0, "leftNum": 12},
+    {"id": 36921418, "timeStart": "18:30", "timeEnd": "20:00", "partyMin": 5, "partyMax": 12, "price": 58.0, "leftNum": 12}
+  ]
+}

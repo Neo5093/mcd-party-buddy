@@ -1,0 +1,9 @@
+{
+  "_note": "样例数据来自 2026-10-09 query-promotions 真实返回（团餐场景）。discount=30 表示 7 折（折后=原价×(1-30/100)）",
+  "excludedProductCodes": ["9900016056", "9900016057", "9900016058", "521742", "521743"],
+  "ladders": {
+    "GMS001": [{"threshold": 300, "discount": 22}, {"threshold": 500, "discount": 26}, {"threshold": 1000, "discount": 30}, {"threshold": 2000, "discount": 34}],
+    "GMS002": [{"threshold": 300, "discount": 12}, {"threshold": 500, "discount": 16}, {"threshold": 1000, "discount": 20}, {"threshold": 2000, "discount": 24}],
+    "GMS003": [{"threshold": 300, "discount": 7}, {"threshold": 500, "discount": 11}, {"threshold": 1000, "discount": 15}, {"threshold": 2000, "discount": 19}]
+  }
+}

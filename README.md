@@ -53,6 +53,58 @@
 > “想给孩子订个生日派对，北京，周末下午的场次”
 > —— 列出可约门店/日期/场次余位，提示成团人数，确认后创建预约单。
 
+## 离线体验（无需 Token）
+
+```bash
+python scripts/demo.py       # 双线全流程演示（样例数据来自真实接口，已脱敏）
+python scripts/selftest.py   # 7 项自测断言
+```
+
+## 架构
+
+```
+用户一句话（人数/预算/时间/城市）
+   │
+   ▼
+WorkBuddy Agent（理解需求、讲解方案、确认下单）
+   │        │
+   │        └──► scripts/（确定性计算：满折优化/场次评估/黄历）── 算术交给代码
+   │
+   ▼
+麦当劳 MCP（mcp.mcd.cn）── 取数交给 MCP：菜单/促销/门店/场次/下单
+   │
+   ▼
+calculate-price 核价 → 人工确认 → 下单
+```
+
+**设计原则**：取数交给 MCP，算术交给代码，表达交给 Agent。金额一律由脚本估算 + `calculate-price` 核价，模型不口算。
+
+## 目录结构
+
+```
+mcd-party-buddy/
+├── README.md                  # 本文件
+├── CONTEST_DECLARATION.md     # 参赛声明（官方原文，未改动）
+├── MCP_INTEGRATION.md         # MCP 集成说明
+├── mcp-config.example.json    # 脱敏 MCP 配置（仅环境变量占位符）
+├── LICENSE                    # MIT
+├── skill/
+│   └── SKILL.md               # 技能主文件（Agent 运行时加载）
+├── scripts/
+│   ├── mcd_client.py          # MCP 客户端（纯标准库，Token 走环境变量）
+│   ├── team_feast.py          # 团餐满折优化器（三套方案模板+阶梯计算）
+│   ├── party_scout.py         # 派对扫描 + 派对黄历
+│   ├── demo.py                # 离线演示
+│   └── selftest.py            # 自测断言
+└── sample_data/               # 样例数据（2026-10-09~10 真实接口返回，已脱敏）
+    ├── menu.json              # 菜单 54 个单品
+    ├── promotions.json        # 团餐满折阶梯（GMS001/002/003 三档）
+    ├── assistance.json        # 助餐服务
+    ├── fees.json              # 打包费/运费样例
+    ├── party.json             # 派对商品/城市/门店/日期/场次
+    └── campaigns.json         # 官方活动日历（10 月）
+```
+
 ## 目标用户
 
 - 行政 / HR / 工会：团建订餐、亲子开放日、生日会

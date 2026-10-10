@@ -1,0 +1,7 @@
+{
+  "_note": "2026-10-09 calculate-price 真实返回的费项（25 人 C 方案单）：打包费 63.5→9.0，运费 6.0→免。实际以下单前 calculate-price 核价为准",
+  "deliveryOriginal": 6.0,
+  "deliveryPrice": 0.0,
+  "packingOriginal": 63.5,
+  "packingPrice": 9.0
+}

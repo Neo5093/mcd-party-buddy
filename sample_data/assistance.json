@@ -1,0 +1,8 @@
+{
+  "_note": "样例数据来自 2026-10-09 query-meal-assistance 真实返回。折扣联动：服务越重，满折力度越小",
+  "items": [
+    {"gmServiceCode": "GMS001", "gmServiceName": "保鲜速达", "serviceItems": ["准时送达", "餐品保温"], "selected": true},
+    {"gmServiceCode": "GMS002", "gmServiceName": "专人分餐", "serviceItems": ["准时送达", "餐品保温", "送餐到桌/到人"], "selected": false},
+    {"gmServiceCode": "GMS003", "gmServiceName": "专人摆台", "serviceItems": ["准时送达", "餐品保温", "餐品摆台", "专人服务"], "selected": false}
+  ]
+}

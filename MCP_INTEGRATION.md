@@ -47,5 +47,17 @@
 ## 业务价值
 
 - 把「组织者」场景从 30 分钟人肉比价/翻场次，压缩到一次对话
-- query-promotions 的满减规则解读是官方留给模型的开放命题，本技能用确定性计算兜底，保证公开展示算价零出错
+- query-promotions 的满减规则解读是官方留给模型的开放命题，本技能用确定性计算兜底（scripts/team_feast.py），保证公开展示算价零出错
 - 全流程真实交易闭环但安全可控：下单前强制确认、不自动支付
+
+## 配套脚本（确定性计算层）
+
+| 脚本 | 职责 | 对应 MCP 工具 |
+|---|---|---|
+| scripts/mcd_client.py | 纯标准库 MCP 客户端（Token 走环境变量） | 全部 |
+| scripts/team_feast.py | 团餐三套方案模板 + 满折阶梯计算 + 下一档差额提示 | query-meals / query-promotions / query-meal-assistance / calculate-price |
+| scripts/party_scout.py | 在售过滤、提前 3 天可约日期、成团提示、派对黄历 | mall-points-products / party 五件套 / campaign-calendar |
+| scripts/demo.py | 离线双线演示（sample_data 为真实接口返回的脱敏样例） | — |
+| scripts/selftest.py | 7 项断言自测，核心计算可安全迭代 | — |
+
+在线模式由 Agent 通过 MCP 取数后交给脚本计算；离线模式（无 Token）可直接用样例数据体验。
