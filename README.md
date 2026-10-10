@@ -58,7 +58,11 @@
 ```bash
 python scripts/demo.py       # 双线全流程演示（样例数据来自真实接口，已脱敏）
 python scripts/selftest.py   # 7 项自测断言
+python scripts/cards.py      # 生成传播物料（结算单卡 + 派对邀请函）
 ```
+
+📺 **效果演示页**：[docs/demo.html](./docs/demo.html)（浏览器打开即看双线真实输出）
+📨 **传播物料示例**：[团建结算单](./examples/settlement-card.html) · [派对邀请函](./examples/party-invite.html)（单文件 HTML，可直接发群）
 
 ## 架构
 

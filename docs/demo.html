@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>麦门派对搭子 PartyBuddy · 效果演示</title>
+<style>
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:#fff;color:#1a1a1a;max-width:860px;margin:0 auto;padding:32px 20px;line-height:1.7}
+h1{font-size:26px;margin:0}
+h2{font-size:19px;margin-top:36px;border-left:4px solid #DA291C;padding-left:10px}
+.sub{color:#666;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+td,th{padding:8px 10px;border-bottom:1px solid #eee;text-align:left}
+th{background:#fafafa}
+.num{font-variant-numeric:tabular-nums}
+.tag{display:inline-block;background:#FFC72C;color:#5A3000;border-radius:6px;padding:1px 8px;font-size:12px}
+.ok{color:#0a7d2c}
+.warn{color:#DA291C}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:16px;font-size:12.5px;overflow:auto;line-height:1.55}
+.ft{margin-top:40px;color:#999;font-size:12px;border-top:1px solid #eee;padding-top:16px}
+code{background:#f1f1f1;border-radius:4px;padding:1px 6px;font-size:13px}
+</style>
+</head>
+<body>
+
+<h1>麦门派对搭子 PartyBuddy 🎉🍟</h1>
+<p class="sub">一句话组局：企业团餐自动算满减，麦麦派对一键约场次。<span class="tag">麦当劳 1024 程序员创意开发大赛参赛作品</span></p>
+<p>本页数据来自 <code>python scripts/demo.py</code> 的真实运行输出（样例数据为 2026-10-09~10 麦当劳 MCP 真实接口返回，已脱敏）。</p>
+
+<h2>A 线 · 企业团餐外送</h2>
+<p>输入：<b>「周五中午 25 人团建，人均 45，送到公司」</b>。技能自动拉取门店菜单与团餐满折阶梯（满 1000 享 7 折），按预算生成三套确定性方案：</p>
+<table>
+<tr><th>方案</th><th>原价</th><th>满折</th><th>实付</th><th>人均</th><th>节省</th><th>预算内</th></tr>
+<tr><td><b>分享狂欢</b>（汉堡×25+薯条×15+麦乐鸡×10+鸡翅×10+麦旋风×10+可乐×25）</td><td class="num">¥1352.5</td><td>1000 元档·7 折</td><td class="num"><b>¥955.75</b></td><td class="num">¥38.23</td><td class="num">¥466.25</td><td class="ok">✅</td></tr>
+<tr><td><b>双堡管饱</b>（麦香鸡+吉士堡+薯条+可乐，每人）</td><td class="num">¥1525</td><td>1000 元档·7 折</td><td class="num"><b>¥1076.5</b></td><td class="num">¥43.06</td><td class="num">¥518</td><td class="ok">✅</td></tr>
+<tr><td><b>经典四件套</b>（板烧鸡腿堡+薯条+香芋派+可乐，每人）</td><td class="num">¥1550</td><td>1000 元档·7 折</td><td class="num"><b>¥1094</b></td><td class="num">¥43.76</td><td class="num">¥525.5</td><td class="ok">✅</td></tr>
+</table>
+<p>💡 自动提示：再点 ¥647.5 原价可升级 2000 元档（6.6 折）。助餐服务三档与折扣联动：保鲜速达（7 折）/ 专人分餐（8 折）/ 专人摆台（8.5 折）。</p>
+
+<h2>B 线 · 派对/体验营预约</h2>
+<p>输入：<b>「想给孩子订个生日派对，北京，周末，10 人」</b>。技能自动过滤在售活动（剔除已过期）、按提前 3 天规则筛可约日期、按距离排门店：</p>
+<pre>🎂 麦当劳狂欢生日派对 迪士尼疯狂动物城主题 · ¥58/人 × 10 人 = ¥580
+   成团 5-12 人 · 时长约 90 分钟 · 需提前 3 天预订
+   在售活动 16 个（已剔除过期 1 个）
+
+📍 最近门店 Top 5：
+  1. 麦当劳北京东单北大街餐厅（1.2km）
+  2. 麦当劳北京东华门大街(景泰蓝)餐厅（1.2km）
+  3. 麦当劳北京幸福大街餐厅（2.2km）  …
+
+📅 场次（可约日期 10-13 ~ 10-18）：
+  · 12:00-13:30 余位 12 · 已达成团线
+  · 18:30-20:00 余位 12 · 已达成团线
+
+🗓 派对黄历（官方活动日历 × 可约日期）：
+  <span class="warn">忌</span> 2026-10-12 不足 3 天提前量
+  <span class="ok">宜</span> 2026-10-13 当天有官方活动：厚松饼堡回归·早餐卡 6 折
+  <span class="ok">宜</span> 2026-10-15 当天有官方活动：PEACEMINUSONE 联名徽章发售
+  <span class="ok">宜</span> 2026-10-18 当天有官方活动：麦金学期卡 49 元/150 天</pre>
+
+<h2>安全边界</h2>
+<p>✅ 下单前强制展示完整清单并等待人工确认 &nbsp; ✅ 绝不自动支付 &nbsp; ✅ 金额由脚本估算 + <code>calculate-price</code> 核价，模型不口算 &nbsp; ✅ Token 只走环境变量，不入库</p>
+
+<div class="ft">麦门派对搭子 PartyBuddy · 麦当劳 1024 程序员创意开发大赛参赛作品 · 非麦当劳官方产品 · 价格与场次以麦当劳官方渠道实时结果为准</div>
+</body>
+</html>
