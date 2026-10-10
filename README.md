@@ -58,9 +58,9 @@
 ## 离线体验（无需 Token）
 
 ```bash
-python scripts/demo.py       # 双线全流程演示（样例数据来自真实接口，已脱敏）
-python scripts/selftest.py   # 7 项自测断言
-python scripts/cards.py      # 生成传播物料（结算单卡 + 派对邀请函）
+python skill/scripts/demo.py       # 双线全流程演示（样例数据来自真实接口，已脱敏）
+python skill/scripts/selftest.py   # 7 项自测断言
+python skill/scripts/cards.py      # 生成传播物料（结算单卡 + 派对邀请函）
 ```
 
 📺 **效果演示页**：[docs/demo.html](./docs/demo.html)（浏览器打开即看双线真实输出）
@@ -94,22 +94,23 @@ mcd-party-buddy/
 ├── CONTEST_DECLARATION.md     # 参赛声明（官方原文，未改动）
 ├── MCP_INTEGRATION.md         # MCP 集成说明
 ├── mcp-config.example.json    # 脱敏 MCP 配置（仅环境变量占位符）
+├── workbuddy.md               # WorkBuddy 开发对话上下文
 ├── LICENSE                    # MIT
-├── skill/
-│   └── SKILL.md               # 技能主文件（Agent 运行时加载）
-├── scripts/
-│   ├── mcd_client.py          # MCP 客户端（纯标准库，Token 走环境变量）
-│   ├── team_feast.py          # 团餐满折优化器（三套方案模板+阶梯计算）
-│   ├── party_scout.py         # 派对扫描 + 派对黄历
-│   ├── demo.py                # 离线演示
-│   └── selftest.py            # 自测断言
-└── sample_data/               # 样例数据（2026-10-09~10 真实接口返回，已脱敏）
-    ├── menu.json              # 菜单 54 个单品
-    ├── promotions.json        # 团餐满折阶梯（GMS001/002/003 三档）
-    ├── assistance.json        # 助餐服务
-    ├── fees.json              # 打包费/运费样例
-    ├── party.json             # 派对商品/城市/门店/日期/场次
-    └── campaigns.json         # 官方活动日历（10 月）
+├── skill/                     # ← 技能包（自包含，可整包提交开放平台）
+│   ├── SKILL.md               # 技能主文件（元数据 + 指令正文）
+│   ├── icon.png               # 技能图标 32x32
+│   ├── references/
+│   │   └── playbook.md        # 灵感案例 ×5
+│   ├── scripts/
+│   │   ├── mcd_client.py      # MCP 客户端（纯标准库，Token 走环境变量）
+│   │   ├── team_feast.py      # 团餐满折优化器（三套方案模板+阶梯计算）
+│   │   ├── party_scout.py     # 派对扫描 + 派对黄历
+│   │   ├── cards.py           # 结算单/邀请函卡片生成器
+│   │   ├── demo.py            # 离线演示
+│   │   └── selftest.py        # 自测断言
+│   └── sample_data/           # 样例数据（真实接口返回，已脱敏）
+├── docs/                      # 演示页 / 视频 / GIF / 海报 / 录屏手册
+└── examples/                  # 传播物料示例（卡片 HTML）
 ```
 
 ## 目标用户

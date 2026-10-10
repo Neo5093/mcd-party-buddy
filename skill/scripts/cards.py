@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import team_feast
 import party_scout
 
-BASE = os.path.join(os.path.dirname(__file__), "..")
+BASE = os.path.join(os.path.dirname(__file__), "..", "..")
 STYLE = """
 <style>
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f5;margin:0;padding:24px}
